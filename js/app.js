@@ -6,7 +6,7 @@
   const [START_Y, START_M] = C.START_MONTH.split('-').map(Number);
   const MONTHS = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
   const MON = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
-  const PALETTE = ['#5B6CFF', '#22B8CF', '#2FBF71', '#FFB020', '#FF6B6B', '#9B6BFF', '#F06595', '#0F1115', '#94A3B8', '#A3C93A'];
+  const PALETTE = ['#1E63D6', '#E03A2F', '#2BB3A3', '#F2A900', '#7FA7E8', '#8E9AAF', '#004A99', '#A3262A', '#5CC8FF', '#C98A3D'];
   const NO_CAT = { id: 'none', name: 'Zonder categorie', color: '#B8BCC6' };
 
   const $app = document.getElementById('app');
@@ -142,7 +142,7 @@
     $app.innerHTML = `
       <header class="top">
         <div class="wrap top-in">
-          <a class="brand" href="#" data-action="tab" data-tab="overview"><span class="logo-mark"></span><span>Cartec <em>Marketingbudget</em></span></a>
+          <a class="brand" href="#" data-action="tab" data-tab="overview"><img class="logo" src="assets/cartec-logo-160.png" alt="Cartec"><span>Marketingbudget</span></a>
           <nav class="tabs">${tabs.map(([k, l]) => `<button data-action="tab" data-tab="${k}" class="${S.tab === k ? 'on' : ''}">${l}</button>`).join('')}</nav>
           <div class="user">
             ${Store.mode === 'demo'
@@ -158,7 +158,7 @@
     return `
       <div class="login">
         <form class="login-card" id="login-form">
-          <div class="brand big"><span class="logo-mark"></span><span>Cartec <em>Marketingbudget</em></span></div>
+          <div class="brand big"><img class="logo" src="assets/cartec-logo-160.png" alt="Cartec"><span>Marketingbudget</span></div>
           <p class="muted">Log in om het marketingbudget te bekijken en bij te werken.</p>
           <label>E-mailadres<input type="email" name="email" autocomplete="username" required></label>
           <label>Wachtwoord<input type="password" name="password" autocomplete="current-password" required></label>

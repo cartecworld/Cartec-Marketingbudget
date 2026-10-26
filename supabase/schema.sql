@@ -61,11 +61,11 @@ create policy "team facturen verwijderen" on storage.objects
 insert into public.categories (name, color, created_at)
 select name, color, now() + (ord || ' milliseconds')::interval
 from (values
-  (1, 'Advertenties', '#5B6CFF'),
-  (2, 'Prijsgeld', '#FFB020'),
-  (3, 'Samenwerkingen', '#2FBF71'),
-  (4, 'Opleidingen/cursussen', '#9B6BFF'),
-  (5, 'Offline marketingmateriaal', '#FF6B6B'),
-  (6, 'Online marketingmateriaal', '#22B8CF')
+  (1, 'Advertenties', '#1E63D6'),
+  (2, 'Prijsgeld', '#E03A2F'),
+  (3, 'Samenwerkingen', '#2BB3A3'),
+  (4, 'Opleidingen/cursussen', '#F2A900'),
+  (5, 'Offline marketingmateriaal', '#7FA7E8'),
+  (6, 'Online marketingmateriaal', '#8E9AAF')
 ) as v (ord, name, color)
 where not exists (select 1 from public.categories);

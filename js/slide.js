@@ -1,7 +1,7 @@
 // Maakt een 16:9-slide (1600×900) van een periode-overzicht en exporteert die als PDF of PNG.
 window.Slide = (() => {
   'use strict';
-  const W = 1600, H = 900, BG = '#F4F4F1';
+  const W = 1600, H = 900, BG = '#04202E';
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const money = (n, dec = 0) => new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR', minimumFractionDigits: dec, maximumFractionDigits: dec }).format(n || 0);
 
@@ -45,7 +45,7 @@ window.Slide = (() => {
     <div class="slide">
       <div class="sl-head">
         <div>
-          <div class="sl-brand"><span class="logo-mark"></span>Cartec Marketingbudget</div>
+          <div class="sl-brand"><img src="assets/cartec-logo-160.png" alt="Cartec">Marketingbudget</div>
           <h1>${esc(d.title)}</h1>
           <p class="sl-sub">${esc(d.subtitle)} · waar gaat het budget naartoe?</p>
         </div>

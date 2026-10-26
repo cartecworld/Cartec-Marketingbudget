@@ -4,12 +4,12 @@ window.Store = (() => {
   const C = window.CARTEC_CONFIG;
   const BUCKET = 'facturen';
   const DEFAULT_CATS = [
-    ['Advertenties', '#5B6CFF'],
-    ['Prijsgeld', '#FFB020'],
-    ['Samenwerkingen', '#2FBF71'],
-    ['Opleidingen/cursussen', '#9B6BFF'],
-    ['Offline marketingmateriaal', '#FF6B6B'],
-    ['Online marketingmateriaal', '#22B8CF'],
+    ['Advertenties', '#1E63D6'],
+    ['Prijsgeld', '#E03A2F'],
+    ['Samenwerkingen', '#2BB3A3'],
+    ['Opleidingen/cursussen', '#F2A900'],
+    ['Offline marketingmateriaal', '#7FA7E8'],
+    ['Online marketingmateriaal', '#8E9AAF'],
   ];
 
   const uid = () => crypto.randomUUID();
